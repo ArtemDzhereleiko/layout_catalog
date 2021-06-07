@@ -1,31 +1,22 @@
 .product-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
   width: 200px;
-  padding: 15px;
-  margin-bottom: 50px;
+  padding: 14px;
   border: 1px solid $color-border;
   border-radius: 5px;
-
-  &:not(:nth-child(4n)) {
-    margin-right: 48px;
-  }
 
   &:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
   }
 
   &__img {
-    display: flex;
-    align-self: center;
-    margin-bottom: 45px;
-    padding-top: 15px;
-    width: 160px;
-    height: 134px;
+    display: grid;
+    margin: 0 auto 45px;
+    padding: 15px 5px 0;
+    width: 168px;
+    height: 145px;
     transition: all 0.4s;
     &:hover {
-      transform: scale(124%);
+      transform: scale(120%);
       border: 3px solid $color-border;
     }
   }
@@ -42,13 +33,13 @@
   }
 
   &__star-and-coments {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   &__stars {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, max-content);
   }
 
   &__star {
@@ -69,13 +60,24 @@
     background-image: url(../images/star-active.svg);
   }
 
+  &__coments {
+    align-self: center;
+    justify-self: end;
+  }
+
   &__price-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__price {
+    align-self: center;
+    justify-self: start;
   }
 
   &__value {
+    align-self: center;
+    justify-self: end;
     font-size: 16px;
     line-height: 19px;
     font-weight: 700;
@@ -87,8 +89,7 @@
   }
 
   &__buy {
-    display: flex;
-    justify-content: center;
+    display: grid;
     align-items: center;
     height: 40px;
     width: 100%;
