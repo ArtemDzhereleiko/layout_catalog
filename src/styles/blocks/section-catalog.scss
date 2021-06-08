@@ -1,17 +1,21 @@
 .section-catalog {
-  display: flex;
+  display: grid;
   justify-content: center;
+  align-items: center;
   font-weight: 400;
   font-size: 11px;
   line-height: 13px;
   color: $color-black;
 
   &__product-cards {
-    display: flex;
-    flex-wrap: wrap;
-    width: 1024px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px 48px;
+    max-width: 1024px;
     padding: 50px 40px;
-  }
 
-  
+    @media (max-width: 1023px) {
+      grid-template-columns: repeat(3, 200px);
+    }
+  }
 }
