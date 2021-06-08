@@ -19,10 +19,15 @@
   &__img {
     display: flex;
     align-self: center;
-    margin: 15px auto 45px;
-    width: 160px;
-    height: 134px;
-    transition: all 0.4s;
+    margin-bottom: 45px;
+    padding-top: 15px;
+    width: 168px;
+    height: 145px;
+    transition: transform 0.4s, border 0.4s;
+    &:hover {
+      transform: scale(120%);
+      border: 3px solid $color-border;
+    }
   }
 
   &__name {
@@ -99,6 +104,7 @@
     text-transform: uppercase;
     border: 1px solid $color-main;
     border-radius: 5px;
+    transition: color 0.4s, background-color 0.4s, border  0.4s;
 
     &:hover {
       color: $color-main;
